@@ -66,6 +66,8 @@ $ docker run -it websphere-liberty:19.0.0.1-webProfile7 /bin/bash
 
 出力:
 default@6143822637f0:/$
+
+※コンテナ内に入ったのでプロンプトが変化
 ```
 
 ```bash
