@@ -34,7 +34,7 @@ $ bin/server package [Libertyのサーバー名] --archive=[任意の名前].zip
 > - 出力されるパッケージ(zip)配置場所: `wlp/usr/servers/Libertyのサーバー名/任意の名前.zip`
 > 
 > - `--include=all 指定` は，任意のLibertyサーバーまるごと渡す場合に便利。他に外部接続などする必要がなければ，まったく同じ環境を簡単に用意可能
-```
+
 
 ```bash
 - Libertyサーバーの構成(対象ディレクトリ: wlp/bin/usr/~~~)
