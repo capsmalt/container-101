@@ -224,3 +224,28 @@ Loaded image: myrestapp:v20190221
 > ロードを試す場合は，他の端末で`docker load`するか，一度 `docker rmi myrestapp:v20190221` で削除してから行う。
 
 ***
+
+## ...Under construction...
+
+### コンテナ内でWAS Libertyを起動して，外部からアクセスする
+
+```bash
+[ホストPCで実行]  
+イメージからコンテナを起動し，ホストPC(1234ポート)からコンテナ(9080ポート)にフォワードするように設定する。そのままコンテナ内に入る。
+$ docker run -p 1234:9080 -it myrestapp:v20190221 bash
+
+上記を実行するとコンテナ内に入るため以下のようなプロンプトに切り替わる
+default@20cd48ee1275:/$ 
+
+[コンテナ内で実行]  
+WAS Libertyを起動する
+$ /opt/ibm/wlp/bin/server run defaultServer
+
+[ブラウザで開く]  
+[localhost:1234/](http://localhost:1234/)
+
+図のようにWAS LibertyのWelcome Pageが確認できれば以下が正常に動作していることが確認できる
+
+- myrestapp:v20190221イメージを使ってコンテナを起動できている
+- コンテナ内でWAS Libertyが動作している
+- 外部から1234ポートで，コンテナ内の9080でLISTENしているWAS Libertyに接続できている
