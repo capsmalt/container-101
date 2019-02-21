@@ -243,11 +243,13 @@ $ /opt/ibm/wlp/bin/server run defaultServer
 
 [ブラウザで開く]  
 [localhost:1234/](http://localhost:1234/)
+```
 
-以下図のようにWAS LibertyのWelcome Pageが確認できれば以下が正常に動作していることが確認できる
+以下図のようにWAS LibertyのWelcome Pageが確認できる。
 
 ![Liberty-WelcomePage](images/Liberty-WelcomePage.png)
 
+上記例の結果から以下3点が行えたことが分かる
 - myrestapp:v20190221イメージを使ってコンテナを起動できている
 - コンテナ内でWAS Libertyが動作している
 - 外部から1234ポートで，コンテナ内の9080でLISTENしているWAS Libertyに接続できている
